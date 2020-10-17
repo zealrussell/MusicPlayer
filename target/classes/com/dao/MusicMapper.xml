@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.MusicMapper">
+
+    <select id="queryAllMusic" resultType="Music">
+        select * from musicplayer.music;
+    </select>
+
+    <select id="queryByName" resultType="Music">
+        select * from musicplayer.music where name like concat(concat("%",#{name}),"%")
+    </select>
+
+    <select id="queryCollect" parameterType="int" resultType="Music">
+        SELECT * FROM music INNER JOIN collect on music.id=collect.musicid and collect.userid=#{id};
+    </select>
+
+    <insert id="addCollect"  parameterType="Collect">
+        insert into collect values(#{userid},#{musicid})
+    </insert>
+
+    <delete id="deleteCollect" parameterType="Collect">
+        delete from collect where  userid=#{userid} and musicid = #{musicid}
+    </delete>
+
+    <select id="queryAllSinger" resultType="type">
+        select distinct id,name from singer;
+    </select>
+
+    <select id="queryBySinger" resultType="Music">
+       SELECT * FROM music INNER JOIN singer on music.id=singer.musicid and singer.id=#{id};
+    </select>
+</mapper>

@@ -1,0 +1,140 @@
+// 自定义语音样式
+.audio-box {
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border-top: 1px solid #dddddd;
+}
+.a-progress {
+  width: 100%;
+  margin: 20px auto;
+  position: relative;
+  padding: 0 65px;
+  color: #3fcccc;
+}
+.a-progress > span {
+  width: 50px;
+  position: absolute;
+  top: -1px;
+}
+.a-progress .played-time {
+  left: 15px;
+  text-align: left;
+}
+.a-progress .audio-time {
+  right: 15px;
+  text-align: right;
+}
+.a-progress .pgs-total {
+  width: 100%;
+  height: 16px;
+  background-color: transparent;
+  border-radius: 10px;
+  position: relative;
+}
+.a-progress .pgs-total:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 7px;
+  bottom: 7px;
+  background-color: #bbbbbb;
+  border-radius: 10px;
+  z-index: -1;
+}
+.a-progress .pgs-total .pgs-play {
+  height: 100%;
+  position: relative;
+  border-radius: 10px;
+}
+.a-progress .pgs-total .pgs-play:before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  bottom: 7px;
+  left: 0;
+  right: 0;
+  background-color: #3fcccc;
+  border-radius: 10px;
+  z-index: 1;
+}
+.a-progress .pgs-total .pgs-play:after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  margin-top: -8px;
+  background-color: #3fcccc;
+  border-radius: 50%;
+  z-index: 1;
+}
+.a-controls {
+  width: 100%;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  margin-bottom: 28px;
+}
+.a-controls .play-pause {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  width: 65px;
+  height: 65px;
+  margin: 0 28px;
+}
+.a-controls .play-pause .icon-btn {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.a-controls .play-pause .icon-play {
+  background: url("../images/record-play.png");
+  background-size: 100% 100%;
+}
+.a-controls .play-pause .icon-pause {
+  background: url("../images/record-stop.png");
+  background-size: 100% 100%;
+}
+.a-controls .skip-ward {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+}
+.a-controls .s-left {
+  left: 15px;
+  background: url("../images/s-left.png");
+  background-size: 100% 100%;
+}
+.a-controls .s-right {
+  right: 15px;
+  background: url("../images/s-right.png");
+  background-size: 100% 100%;
+}
+.a-controls .turn-ward {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+}
+.a-controls .t-left {
+  left: 25%;
+  margin-left: -20px;
+  background: url("../images/t-left.png");
+  background-size: 100% 100%;
+}
+.a-controls .t-right {
+  right: 25%;
+  margin-right: -20px;
+  background: url("../images/t-right.png");
+  background-size: 100% 100%;
+}
